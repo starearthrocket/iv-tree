@@ -4,6 +4,7 @@ const locationInput = document.getElementById("location");
 const descriptionInput = document.getElementById("description");
 const reportsList = document.getElementById("reportsList");
 const emptyMessage = document.getElementById("emptyMessage");
+const reportCount = document.getElementById("reportCount");
 
 const reports = JSON.parse(localStorage.getItem("reports")) || [];
 
@@ -39,6 +40,10 @@ reportForm.addEventListener("submit", function (event) {
 
 function displayReports() {
     reportsList.innerHTML = "";
+ reportCount.textContent =
+    reports.length === 1
+        ? "1 report"
+        : `${reports.length} reports`;
 
     if (reports.length === 0) {
         emptyMessage.classList.remove("hidden");
