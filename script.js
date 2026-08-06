@@ -6,6 +6,7 @@ const reportsList = document.getElementById("reportsList");
 const emptyMessage = document.getElementById("emptyMessage");
 const reportCount = document.getElementById("reportCount");
 const searchInput = document.getElementById("searchInput");
+const clearReportsButton = document.getElementById("clearReportsButton");
 
 const reports = JSON.parse(localStorage.getItem("reports")) || [];
 
@@ -97,6 +98,27 @@ deleteButton.addEventListener("click", function () {
     });
 
 }
+searchInput.addEventListener("input", displayReports);
+
+clearReportsButton.addEventListener("click", function () {
+
+    const confirmed = confirm("Delete all reports?");
+
+    if (!confirmed) {
+        return;
+    }
+
+    reports.length = 0;
+
+    localStorage.setItem(
+        "reports",
+        JSON.stringify(reports)
+    );
+
+    displayReports();
+
+});
+
 searchInput.addEventListener("input", displayReports);
 
 displayReports();
