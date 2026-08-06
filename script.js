@@ -53,6 +53,6 @@ function displayReports() {
             <p>${report.description}</p>
         `;
 
-        reportsList.appendChild(reportCard);
+             reportsList.appendChild(reportCard);
     });
 }
