@@ -5,6 +5,7 @@ const descriptionInput = document.getElementById("description");
 const reportsList = document.getElementById("reportsList");
 const emptyMessage = document.getElementById("emptyMessage");
 const reportCount = document.getElementById("reportCount");
+const searchInput = document.getElementById("searchInput");
 
 const reports = JSON.parse(localStorage.getItem("reports")) || [];
 
@@ -41,19 +42,26 @@ reportForm.addEventListener("submit", function (event) {
 
 function displayReports() {
     reportsList.innerHTML = "";
- reportCount.textContent =
-    reports.length === 1
-        ? "1 report"
-        : `${reports.length} reports`;
 
-    if (reports.length === 0) {
+    const searchTerm = searchInput.value.trim().toLowerCase();
+
+    const filteredReports = reports.filter(function (report) {
+        return report.location.toLowerCase().includes(searchTerm);
+    });
+ reportCount.textContent =
+    filteredReports.length === 1
+        ? "1 report"
+        : `${filteredReports.length} reports`;
+
+    if (filteredReports.length === 0) {
         emptyMessage.classList.remove("hidden");
         return;
     }
 
     emptyMessage.classList.add("hidden");
 
-    reports.forEach(function (report, index) {
+    filteredReports.forEach(function (report) {
+    const index = reports.indexOf(report);
         const reportCard = document.createElement("div");
         reportCard.classList.add("report-card");
 
@@ -87,5 +95,8 @@ deleteButton.addEventListener("click", function () {
 
 });
     });
+
 }
+searchInput.addEventListener("input", displayReports);
+
 displayReports();
