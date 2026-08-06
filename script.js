@@ -47,16 +47,34 @@ function displayReports() {
 
     emptyMessage.classList.add("hidden");
 
-    reports.forEach(function (report) {
+    reports.forEach(function (report, index) {
         const reportCard = document.createElement("div");
         reportCard.classList.add("report-card");
 
-        reportCard.innerHTML = `
-            <h3>${report.location}</h3>
-            <p>${report.description}</p>
-        `;
+       reportCard.innerHTML = `
+    <h3>${report.location}</h3>
+    <p>${report.description}</p>
+
+    <button class="deleteButton">
+        Delete
+    </button>
+`;
 
              reportsList.appendChild(reportCard);
+             const deleteButton = reportCard.querySelector(".deleteButton");
+
+deleteButton.addEventListener("click", function () {
+
+    reports.splice(index, 1);
+
+    localStorage.setItem(
+        "reports",
+        JSON.stringify(reports)
+    );
+
+    displayReports();
+
+});
     });
 }
 displayReports();
