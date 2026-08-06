@@ -5,7 +5,7 @@ const descriptionInput = document.getElementById("description");
 const reportsList = document.getElementById("reportsList");
 const emptyMessage = document.getElementById("emptyMessage");
 
-const reports = [];
+const reports = JSON.parse(localStorage.getItem("reports")) || [];
 
 reportButton.addEventListener("click", function () {
     reportForm.classList.toggle("hidden");
@@ -28,6 +28,9 @@ reportForm.addEventListener("submit", function (event) {
     };
 
     reports.push(newReport);
+
+    localStorage.setItem("reports", JSON.stringify(reports));
+
     displayReports();
 
     reportForm.reset();
@@ -56,3 +59,4 @@ function displayReports() {
              reportsList.appendChild(reportCard);
     });
 }
+displayReports();
