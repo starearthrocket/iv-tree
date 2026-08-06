@@ -138,3 +138,9 @@ button {
 .deleteButton:hover {
     background: #a51f1f;
 }
+.reportDate {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: 12px 0;
+}

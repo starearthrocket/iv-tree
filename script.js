@@ -23,10 +23,11 @@ reportForm.addEventListener("submit", function (event) {
         return;
     }
 
-    const newReport = {
-        location: location,
-        description: description
-    };
+   const newReport = {
+    location: location,
+    description: description,
+    date: new Date().toLocaleString()
+};
 
     reports.push(newReport);
 
@@ -56,9 +57,14 @@ function displayReports() {
         const reportCard = document.createElement("div");
         reportCard.classList.add("report-card");
 
-       reportCard.innerHTML = `
+reportCard.innerHTML = `
     <h3>${report.location}</h3>
+
     <p>${report.description}</p>
+
+    <p class="reportDate">
+        Reported: ${report.date}
+    </p>
 
     <button class="deleteButton">
         Delete
