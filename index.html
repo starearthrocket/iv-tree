@@ -5,37 +5,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>IV Tree 🌳</title>
+    <title>IV Tree</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-
 <header>
-    <h1>IV Tree</h1>
-    <p>Helping communities protect trees from invasive ivy.</p>
+
+    <nav>
+
+        <h1>IV Tree</h1>
+
+        <ul>
+
+            <li><a href="#">Home</a></li>
+
+            <li><a href="#">Report</a></li>
+
+            <li><a href="#">Map</a></li>
+
+            <li><a href="#">About</a></li>
+
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
 </header>
 
-<main>
+    <main>
 
-<section class="hero">
+        <section id="home" class="hero">
 
-<h2>Report an Ivy-Covered Tree</h2>
+            <h2>Protect Trees from Invasive Ivy</h2>
 
-<p>
-Help your local environment by reporting trees affected by invasive ivy.
-</p>
+            <p>
+                IV Tree helps local communities report ivy-covered trees so they can
+                be monitored and protected.
+            </p>
 
-<button id="reportButton">
-Report a Tree
-</button>
+            <button id="reportButton">
+                Report a Tree
+            </button>
 
-</section>
+            <div id="reportForm" class="hidden">
 
-</main>
+            <h3>Report an Ivy-Covered Tree</h3>
 
-<script src="script.js"></script>
+            <label>
+            Location
+        <input type="text" placeholder="Enter location">
+        </label>
+
+<label>
+Description
+<textarea placeholder="Describe the tree"></textarea>
+</label>
+
+<button>Submit Report</button>
+
+</div>
+
+        </section>
+
+        <section class="features">
+
+            <div class="feature-card">
+                <h3>📍 Find</h3>
+                <p>Locate an ivy-covered tree in your local area.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📷 Report</h3>
+                <p>Submit a report with photographs and location details.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🌳 Protect</h3>
+                <p>Help communities monitor trees and reduce invasive ivy.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
 
 </body>
 
