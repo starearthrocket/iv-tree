@@ -46,9 +46,11 @@ function displayReports() {
 
     const searchTerm = searchInput.value.trim().toLowerCase();
 
-    const filteredReports = reports.filter(function (report) {
+   const filteredReports = reports
+    .filter(function (report) {
         return report.location.toLowerCase().includes(searchTerm);
-    });
+    })
+    .reverse();
  reportCount.textContent =
     filteredReports.length === 1
         ? "1 report"
@@ -98,7 +100,7 @@ deleteButton.addEventListener("click", function () {
     });
 
 }
-searchInput.addEventListener("input", displayReports);
+
 
 clearReportsButton.addEventListener("click", function () {
 
