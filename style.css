@@ -9,12 +9,16 @@ body {
 header {
     background-color: #1d5c2e;
     color: white;
-    padding: 20px 40px;
+    padding: 0px 0px;
 }
+
 nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 40px;
+    min-height: 120px;
 }
 
 nav ul {
@@ -36,17 +40,15 @@ nav a:hover {
 }
 
 .site-logo {
-    width: 260px;
+    width: 360px;
+    max-width: 30vw;
     height: auto;
     display: block;
+    object-fit: contain;
+    margin: 12px 0 0 0;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-}
+
 
 .hero {
     padding: 70px 20px;
