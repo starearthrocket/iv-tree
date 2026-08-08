@@ -43,6 +43,7 @@ reportForm.addEventListener("submit", function (event) {
 
 function displayReports() {
     reportsList.innerHTML = "";
+    clearReportsButton.classList.toggle("hidden", reports.length === 0);
 
     const searchTerm = searchInput.value.trim().toLowerCase();
 

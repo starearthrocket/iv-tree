@@ -96,7 +96,7 @@ button {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 .hidden {
-    display: none;
+    display: none !important;
 }
 /* Report Form */
 
@@ -237,4 +237,21 @@ button {
     display: block;
     margin: 0 auto;
     border-radius: 12px;
+}
+.empty-state {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.empty-state-image {
+    width: 400px;
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.empty-state p {
+    color: #4f5f50;
+    font-style: italic;
 }
