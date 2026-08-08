@@ -7,6 +7,7 @@ const emptyMessage = document.getElementById("emptyMessage");
 const reportCount = document.getElementById("reportCount");
 const searchInput = document.getElementById("searchInput");
 const clearReportsButton = document.getElementById("clearReportsButton");
+const mapContainer = document.getElementById("mapContainer");
 
 const reports = JSON.parse(localStorage.getItem("reports")) || [];
 
@@ -36,6 +37,7 @@ reportForm.addEventListener("submit", function (event) {
     localStorage.setItem("reports", JSON.stringify(reports));
 
     displayReports();
+    displayMapPins();
 
     reportForm.reset();
     reportForm.classList.add("hidden");
@@ -123,5 +125,24 @@ clearReportsButton.addEventListener("click", function () {
 });
 
 searchInput.addEventListener("input", displayReports);
+function displayMapPins() {
+    const oldPins = mapContainer.querySelectorAll(".map-pin");
+    oldPins.forEach(function (pin) {
+        pin.remove();
+    });
 
+    reports.forEach(function () {
+        const pin = document.createElement("img");
+
+        pin.src = "assets/icons/map-icon-new.png";
+        pin.alt = "Reported tree location";
+        pin.classList.add("map-pin");
+
+        pin.style.top = `${20 + Math.random() * 60}%`;
+        pin.style.left = `${20 + Math.random() * 60}%`;
+
+        mapContainer.appendChild(pin);
+    });
+}
 displayReports();
+displayMapPins();
