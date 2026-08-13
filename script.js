@@ -29,7 +29,9 @@ reportForm.addEventListener("submit", function (event) {
    const newReport = {
     location: location,
     description: description,
-    date: new Date().toLocaleString()
+    date: new Date().toLocaleString(),
+    mapTop: 20 + Math.random() * 60,
+    mapLeft: 20 + Math.random() * 60
 };
 
     reports.push(newReport);
@@ -98,6 +100,7 @@ deleteButton.addEventListener("click", function () {
     );
 
     displayReports();
+    displayMapPins();
 
 });
     });
@@ -121,6 +124,7 @@ clearReportsButton.addEventListener("click", function () {
     );
 
     displayReports();
+    displayMapPins();
 
 });
 
@@ -131,18 +135,28 @@ function displayMapPins() {
         pin.remove();
     });
 
-    reports.forEach(function () {
+    reports.forEach(function (report) {
         const pin = document.createElement("img");
+        pin.title = report.location;
 
         pin.src = "assets/icons/map-icon-new.png";
-        pin.alt = "Reported tree location";
         pin.classList.add("map-pin");
+        pin.alt = `Reported ivy-covered tree at ${report.location}`;
 
-        pin.style.top = `${20 + Math.random() * 60}%`;
-        pin.style.left = `${20 + Math.random() * 60}%`;
+        pin.style.top = `${report.mapTop}%`;
+        pin.style.left = `${report.mapLeft}%`;
 
         mapContainer.appendChild(pin);
     });
 }
 displayReports();
 displayMapPins();
+const contactForm = document.querySelector(".contact-form");
+
+contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    alert("Thank you! Your message has been sent.");
+
+    contactForm.reset();
+});
