@@ -88,8 +88,8 @@ The designs considered both desktop and mobile layouts to ensure that the websit
 
 #### Desktop Wireframe
 
-Desktop wireframe image will be added here.
+![Desktop Wireframe](assets/wireframes/desktop-wireframe.png)
 
 #### Mobile Wireframe
 
-Mobile wireframe image will be added here.
+![Mobile Wireframe](assets/wireframes/mobile-wireframe.png)
