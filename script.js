@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 const reportButton = document.getElementById("reportButton");
 const reportForm = document.getElementById("reportForm");
 const locationInput = document.getElementById("location");
@@ -56,10 +57,7 @@ function displayReports() {
         return report.location.toLowerCase().includes(searchTerm);
     })
     .reverse();
- reportCount.textContent =
-    filteredReports.length === 1
-        ? "1 report"
-        : `${filteredReports.length} reports`;
+    reportCount.textContent = filteredReports.length === 1 ? "1 report" : `${filteredReports.length} reports`;
 
     if (filteredReports.length === 0) {
         emptyMessage.classList.remove("hidden");
@@ -73,8 +71,7 @@ function displayReports() {
         const reportCard = document.createElement("div");
         reportCard.classList.add("report-card");
 
-reportCard.innerHTML = `
-    <h3>${report.location}</h3>
+reportCard.innerHTML = `<h3>${report.location}</h3>
 
     <p>${report.description}</p>
 
