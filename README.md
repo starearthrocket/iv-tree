@@ -168,7 +168,62 @@ The current version of I-V Tree provides the core functionality required to demo
 - **Visual Studio Code** - Used to develop and manage the project files.
 
 ## Testing
+
 Testing was carried out throughout development to ensure that the main features worked as expected.
+
+### Manual and Automated Testing
+
+Manual testing was used throughout the development of I-V Tree to check how the website responded to user interaction. This included testing the report form, form validation, searching reports, deleting reports, clearing reports, navigation, map markers, the Contact form and the responsive layout. Manual testing is useful for checking user experience and confirming that features behave as expected when a user interacts with the website.
+
+Automated testing uses software tools to check code or functionality automatically. It can be useful for larger applications where tests need to be repeated frequently, particularly after changes have been made to the code. Automated tests can help identify regressions and confirm that existing functionality continues to work.
+
+For this project, manual testing was appropriate because I-V Tree is a relatively small front-end application and its main functionality is based on direct user interaction. Code validation tools were also used to check the HTML, CSS and JavaScript for syntax and code-quality issues.
+
+### Testing Evidence
+
+The following screenshots provide evidence of functional and responsive testing carried out on the deployed website.
+
+#### Report Functionality
+
+Reports were created and tested to confirm that submitted data is displayed correctly and corresponding map markers are generated.
+
+![Reports and map testing](assets/screenshots/reports-and-map.png)
+
+#### Search Testing
+
+The report search feature was tested using a location that did not match any stored reports. The displayed report count updated and the empty state was shown correctly.
+
+![Search no results testing](assets/screenshots/search-no-results.png)
+
+#### Delete Testing
+
+An individual report was deleted to confirm that both the report and its corresponding map marker were removed.
+
+![Delete report testing](assets/screenshots/delete-report-test.png)
+
+#### Clear All Reports Testing
+
+The Clear All Reports feature was tested to confirm that all stored reports and map markers were removed.
+
+![Clear all reports testing](assets/screenshots/clear-all-reports.png)
+
+#### Persistence Testing
+
+A report was created and the browser was refreshed. The report and its corresponding map marker remained available, confirming that report data persisted using localStorage.
+
+![Report persistence testing](assets/screenshots/report-persistence.png)
+
+#### Responsive Testing
+
+The website was tested using Chrome Developer Tools at an iPhone 12 Pro viewport size of 390 x 844 pixels.
+
+The homepage navigation, hero section and feature cards displayed correctly on the smaller viewport.
+
+![Mobile homepage testing](assets/screenshots/mobile-homepage.png)
+
+The reported trees section and map were also tested at the same mobile viewport size and displayed without horizontal overflow.
+
+![Mobile reports and map testing](assets/screenshots/mobile-reports-map.png)
 
 ### Manual Testing
 | Feature | Test | Expected Result | Result |
