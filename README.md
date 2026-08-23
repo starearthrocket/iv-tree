@@ -189,6 +189,12 @@ Reports were created and tested to confirm that submitted data is displayed corr
 
 ![Reports and map testing](assets/screenshots/reports-and-map.png)
 
+#### Form Validation Testing
+
+The report form was tested with the required fields left empty. Submission was prevented and the user received a clear validation message.
+
+![Form validation testing](assets/screenshots/form-validation.png)
+
 #### Search Testing
 
 The report search feature was tested using a location that did not match any stored reports. The displayed report count updated and the empty state was shown correctly.
@@ -328,6 +334,12 @@ The generated assets were selected, adapted and incorporated into the final webs
 The project was developed as part of my coursework and was influenced by an interest in protecting trees and encouraging community involvement in local environmental issues.
 
 OpenAI's ChatGPT was used as a development support tool during the project for guidance, troubleshooting and the creation of custom visual assets. The final project structure, implementation, testing and development decisions were completed and reviewed by the author.
+
+### Code Attribution
+
+No third-party JavaScript libraries or copied tutorial code were used in the final project. The HTML, CSS and JavaScript were created specifically for I-V Tree, with development guidance and troubleshooting support from OpenAI's ChatGPT.
+
+Where guidance was used, the code was reviewed, adapted and tested within the project before implementation.
 
 ## Project Status
 I-V Tree is currently a working prototype demonstrating the core concept of reporting and monitoring trees affected by invasive ivy.
