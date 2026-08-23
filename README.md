@@ -297,6 +297,18 @@ The finished website has been deployed using GitHub Pages and can be viewed onli
 
 The deployed version was tested to confirm that the website loads correctly and that the main functionality works as expected.
 
+#### Deployment Steps
+
+The website was deployed to GitHub Pages using the following process:
+
+1. The project was pushed to the GitHub repository.
+2. In the repository, **Settings** was opened.
+3. **Pages** was selected from the repository settings.
+4. Under **Build and deployment**, the deployment source was set to **Deploy from a branch**.
+5. The **main** branch and **/root** folder were selected.
+6. The settings were saved and GitHub Pages generated the deployed website.
+7. The deployed site was tested to confirm that the pages, assets and interactive functionality worked correctly.
+
 [View the live I-V Tree website](https://starearthrocket.github.io/iv-tree/)
 
 ## Credits
@@ -307,11 +319,15 @@ All written content for I-V Tree was created specifically for this project.
 
 ### Media
 
-Custom images and visual assets were created for the I-V Tree project and are stored within the project's assets folder.
+Custom visual assets used throughout the I-V Tree website were created specifically for this project with the assistance of OpenAI's ChatGPT image-generation tools. These include the I-V Tree branding, environmental imagery, map marker and supporting illustrations.
+
+The generated assets were selected, adapted and incorporated into the final website design by the author and are stored within the project's assets folder.
 
 ### Acknowledgements
 
 The project was developed as part of my coursework and was influenced by an interest in protecting trees and encouraging community involvement in local environmental issues.
+
+OpenAI's ChatGPT was used as a development support tool during the project for guidance, troubleshooting and the creation of custom visual assets. The final project structure, implementation, testing and development decisions were completed and reviewed by the author.
 
 ## Project Status
 I-V Tree is currently a working prototype demonstrating the core concept of reporting and monitoring trees affected by invasive ivy.
