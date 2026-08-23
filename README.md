@@ -209,6 +209,28 @@ Several issues were identified and resolved during development:
 
 - **Mobile feature cards:** The feature cards became too narrow when displayed side-by-side on mobile. The responsive layout was changed so that the cards stack vertically on smaller screens.
 
+## Validation
+
+The HTML, CSS and JavaScript code were validated as part of the testing process. Validation was used to identify and correct syntax issues and ensure the code followed recognised web development standards.
+
+### HTML Validation
+
+The HTML was tested using the W3C Markup Validation Service.
+
+![HTML validation results](assets/testing/html-validation.png)
+
+### CSS Validation
+
+The CSS was tested using the W3C CSS Validation Service.
+
+![CSS validation results](assets/testing/css-validation.png)
+
+### JavaScript Validation
+
+The JavaScript was tested using JSHint to identify potential errors and code-quality issues.
+
+![JavaScript validation results](assets/testing/js-validation.png)
+
 ## Deployment
 The project is stored in a GitHub repository and version control was used throughout development.
 
@@ -216,7 +238,11 @@ Changes were committed regularly using Git to create a record of the development
 
 ### GitHub Pages
 
-The finished website can be deployed using GitHub Pages so that it can be viewed online directly from the project repository.
+The finished website has been deployed using GitHub Pages and can be viewed online directly from the project repository.
+
+The deployed version was tested to confirm that the website loads correctly and that the main functionality works as expected.
+
+[View the live I-V Tree website](https://starearthrocket.github.io/iv-tree/)
 
 ## Credits
 
