@@ -323,6 +323,15 @@ The updated files were revalidated after these changes.
 ![404 page validation](assets/testing/404-validation-resubmission.png)
 
 
+## Live Deployment Verification
+
+Following assessor feedback, the deployed GitHub Pages version was rechecked on **13 October 2026**.
+
+The live site loaded successfully with its styling, images and interactive functionality. The custom 404 page was also tested on the deployed site and displayed correctly for a nonexistent URL.
+
+![Live GitHub Pages verification - 13 October 2026](assets/testing/live-site-resubmission-2026-10-13.png)
+
+
 ## Deployment
 The project is stored in a GitHub repository and version control was used throughout development.
 
