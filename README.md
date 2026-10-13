@@ -116,7 +116,7 @@ Submitted tree reports are displayed as individual report cards containing the l
 
 A report counter shows the number of reports currently stored.
 
-Users can search existing reports by entering keywords into the search field, making it easier to find reports relating to a particular location or description.
+Users can search existing reports by entering a location into the search field, making it easier to find reports relating to a particular area.
 
 Individual reports can be removed using the Delete button, while the Clear All Reports button allows all stored reports to be removed at once.
 
@@ -143,6 +143,17 @@ I-V Tree uses responsive CSS to adapt the layout for different screen sizes.
 A mobile media query adjusts the navigation, logo, hero section and feature cards for smaller screens. On mobile devices, navigation links wrap neatly and content is stacked vertically to improve readability and usability.
 
 The website was manually tested using Chrome Developer Tools at desktop and mobile screen sizes, including an iPhone-sized viewport.
+
+## Known Issues and Limitations
+
+I-V Tree is currently a working prototype.
+
+The Tree Report Map provides a visual representation of submitted reports, but marker positions do not represent exact geographic coordinates. Accurate geolocation and geocoding are outside the scope of this version and are listed as future development.
+
+Reports are stored using the browser's localStorage. This means reports remain available after refreshing the page on the same browser, but they are not shared between devices or users.
+
+The Contact form currently demonstrates front-end form behaviour and confirmation feedback only. It does not send messages to a production email service.
+
 
 ## Future Features
 The current version of I-V Tree provides the core functionality required to demonstrate the project concept. Future development could include:
@@ -238,7 +249,7 @@ The reported trees section and map were also tested at the same mobile viewport 
 | Form validation | Submit the report form with required information missing | Browser prevents submission | Pass |
 | Report persistence | Refresh the browser after creating a report | Report remains available | Pass |
 | Report counter | Add and remove reports | Counter updates correctly | Pass |
-| Search | Search using report location or description | Matching reports are displayed | Pass |
+| Search | Search using report location | Matching reports are displayed | Pass |
 | Delete report | Delete an individual report | Report and corresponding map marker are removed | Pass |
 | Clear all reports | Create multiple reports and select Clear All Reports | All reports and map markers are removed | Pass |
 | Map persistence | Refresh after creating a report | Report marker remains in the same position | Pass |
@@ -291,6 +302,26 @@ The CSS was tested using the W3C CSS Validation Service.
 The JavaScript was tested using JSHint to identify potential errors and code-quality issues.
 
 ![JavaScript validation results](assets/testing/js-validation.png)
+
+## Resubmission Validation Evidence
+
+Following assessor feedback, the HTML, CSS and JavaScript were reformatted and documented to improve code readability and consistency. A custom 404 page was also added.
+
+The updated files were revalidated after these changes.
+
+- **HTML:** Passed with no errors or warnings.
+- **CSS:** Passed with no errors.
+- **JavaScript:** Passed JSHint with no warnings or errors.
+- **404 page:** Passed HTML validation with no errors or warnings.
+
+![Resubmission HTML validation](assets/testing/html-validation-resubmission.png)
+
+![Resubmission CSS validation](assets/testing/css-validation-resubmission.png)
+
+![Resubmission JavaScript validation](assets/testing/js-validation-resubmission.png)
+
+![404 page validation](assets/testing/404-validation-resubmission.png)
+
 
 ## Deployment
 The project is stored in a GitHub repository and version control was used throughout development.

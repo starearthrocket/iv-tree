@@ -5,198 +5,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IV Tree</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+    <!-- Header and site navigation -->
+    <header>
+        <nav>
+            <img
+                src="assets/logos/logo.png"
+                alt="I-V Tree logo"
+                class="site-logo"
+            >
 
-    <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#reports">Report</a></li>
+                <li><a href="#map">Map</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<img src="assets/logos/logo.png" alt="I-V Tree logo" class="site-logo">
-       <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#reports">Report</a></li>
-    <li><a href="#map">Map</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-       </ul>
+    <main>
 
-    </nav>
+        <!-- Hero and report form -->
+        <section id="home" class="hero">
+            <h1>Protect Trees from Invasive Ivy</h1>
 
-</header>
+            <p>
+                IV Tree helps local communities report ivy-covered trees so they can
+                be monitored and protected.
+            </p>
 
-<main>
-
-    <section id="home" class="hero">
-
-        <h1>Protect Trees from Invasive Ivy</h1>
-
-        <p>
-            IV Tree helps local communities report ivy-covered trees so they can
-            be monitored and protected.
-        </p>
-
-        <button id="reportButton">
-            Report a Tree
-        </button>
-
-        <form id="reportForm" class="hidden">
-
-            <h2>Report an Ivy-Covered Tree</h2>
-
-            <label for="location">Location</label>
-            <input
-                type="text"
-                id="location"
-                name="location"
-                placeholder="Enter location"
-                required
-               >
-
-            <label for="description">Description</label>
-            <textarea
-                id="description"
-                name="description"
-                placeholder="Describe the tree"
-            ></textarea>
-
-            <button type="submit">
-                Submit Report
+            <button id="reportButton">
+                Report a Tree
             </button>
 
-        </form>
+            <form id="reportForm" class="hidden">
+                <h2>Report an Ivy-Covered Tree</h2>
 
-    </section>
+                <label for="location">Location</label>
+                <input
+                    type="text"
+                    id="location"
+                    name="location"
+                    placeholder="Enter location"
+                    required
+                >
 
-    <section class="features">
+                <label for="description">Description</label>
+                <textarea
+                    id="description"
+                    name="description"
+                    placeholder="Describe the tree"
+                ></textarea>
 
-        <div class="feature-card">
-            <h3>📍 Find</h3>
-            <p>Locate an ivy-covered tree in your local area.</p>
-        </div>
+                <button type="submit">
+                    Submit Report
+                </button>
+            </form>
+        </section>
 
-        <div class="feature-card">
-            <h3>📷 Report</h3>
-            <p>Submit a report with location and tree details.</p>
-        </div>
+        <!-- Feature overview -->
+        <section class="features">
+            <div class="feature-card">
+                <h3>📍 Find</h3>
+                <p>Locate an ivy-covered tree in your local area.</p>
+            </div>
 
-        <div class="feature-card">
-            <h3>🌳 Protect</h3>
-            <p>Help communities monitor trees and reduce invasive ivy.</p>
-        </div>
+            <div class="feature-card">
+                <h3>📷 Report</h3>
+                <p>Submit a report with location and tree details.</p>
+            </div>
 
-    </section>
-    <section class="before-after-section">
+            <div class="feature-card">
+                <h3>🌳 Protect</h3>
+                <p>Help communities monitor trees and reduce invasive ivy.</p>
+            </div>
+        </section>
 
-    <h2>Why Removing Ivy Matters</h2>
+        <!-- Before and after conservation information -->
+        <section class="before-after-section">
+            <h2>Why Removing Ivy Matters</h2>
 
-    <p>
-        Heavy ivy growth can cover a tree, reduce the light reaching it
-        and provide hiding places for pests. Removing ivy from around
-        the base can help the tree remain healthy.
-    </p>
+            <p>
+                Heavy ivy growth can cover a tree, reduce the light reaching it
+                and provide hiding places for pests. Removing ivy from around
+                the base can help the tree remain healthy.
+            </p>
 
-    <img
-        src="assets/backgrounds/before-after.png"
-        alt="Illustration comparing an ivy-covered tree before and after ivy removal"
-        class="before-after-image"
-    >
+            <img
+                src="assets/backgrounds/before-after.png"
+                alt="Illustration comparing an ivy-covered tree before and after ivy removal"
+                class="before-after-image"
+            >
+        </section>
 
-</section>
-    <section id="reports" class="reports-section">
+        <!-- Tree reports and search -->
+        <section id="reports" class="reports-section">
+            <h2>Reported Trees</h2>
 
-    <h2>Reported Trees</h2>
-    <p id="reportCount">0 reports</p>
-    <input
-    type="search"
-    id="searchInput"
-    placeholder="Search reports by location"
-    aria-label="Search reports by location"
-    >
-    <button id="clearReportsButton">
-    Clear All Reports
-</button>
+            <p id="reportCount">0 reports</p>
 
-<div id="emptyMessage" class="empty-state">
-    <img
-        src="assets/icons/empty-state-illustration.png"
-        alt="No tree reports yet"
-        class="empty-state-image"
-    >
-    <p>No reports have been submitted yet.</p>
-</div>
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search reports by location"
+                aria-label="Search reports by location"
+            >
 
-    <div id="reportsList"></div>
+            <button id="clearReportsButton">
+                Clear All Reports
+            </button>
 
-</section>
-<section id="map" class="map-section">
+            <div id="emptyMessage" class="empty-state">
+                <img
+                    src="assets/icons/empty-state-illustration.png"
+                    alt="No tree reports yet"
+                    class="empty-state-image"
+                >
 
-    <h2>Tree Report Map</h2>
+                <p>No reports have been submitted yet.</p>
+            </div>
 
-    <p>
-        Explore reported ivy-covered trees and monitor areas where trees
-        may need attention.
-    </p>
+            <div id="reportsList"></div>
+        </section>
 
-    <div class="map-container" id="mapContainer">
-        <img
-            src="assets/backgrounds/map-background.png"
-            alt="Map showing reported tree locations"
-            class="map-background"
-        >
+        <!-- Prototype report map -->
+        <section id="map" class="map-section">
+            <h2>Tree Report Map</h2>
 
+            <p>
+                Explore reported ivy-covered trees and monitor areas where trees
+                may need attention.
+            </p>
 
-    </div>
+            <div class="map-container" id="mapContainer">
+                <img
+                    src="assets/backgrounds/map-background.png"
+                    alt="Map showing reported tree locations"
+                    class="map-background"
+                >
+            </div>
+        </section>
 
-</section>
+        <!-- About section -->
+        <section id="about" class="about-section">
+            <h2>About I-V Tree</h2>
 
-<section id="about" class="about-section">
+            <p>
+                I-V Tree is a community-focused project designed to help identify,
+                report and monitor trees affected by invasive ivy.
+            </p>
 
-    <h2>About I-V Tree</h2>
+            <img
+                src="assets/backgrounds/about-community.png"
+                alt="Community working together to protect local trees"
+                class="about-image"
+            >
+        </section>
 
-    <p>
-        I-V Tree is a community-focused project designed to help identify,
-        report and monitor trees affected by invasive ivy.
-    </p>
+        <!-- Contact section -->
+        <section id="contact" class="contact-section">
+            <h2>Contact I-V Tree</h2>
 
-    <img
-    src="assets/backgrounds/about-community.png"
-    alt="Community working together to protect local trees"
-    class="about-image"
->
+            <p>
+                Have a question, suggestion or want to get involved?
+                Get in touch with the I-V Tree community.
+            </p>
 
-</section>
+            <form class="contact-form">
+                <label for="contactName">Name</label>
+                <input type="text" id="contactName" required>
 
-<section id="contact" class="contact-section">
+                <label for="contactEmail">Email</label>
+                <input type="email" id="contactEmail" required>
 
-    <h2>Contact I-V Tree</h2>
+                <label for="contactMessage">Message</label>
+                <textarea
+                    id="contactMessage"
+                    rows="5"
+                    required
+                ></textarea>
 
-    <p>
-        Have a question, suggestion or want to get involved?
-        Get in touch with the I-V Tree community.
-    </p>
+                <button type="submit">
+                    Send Message
+                </button>
+            </form>
+        </section>
 
-    <form class="contact-form">
-    <label for="contactName">Name</label>
-    <input type="text" id="contactName" required>
+    </main>
 
-    <label for="contactEmail">Email</label>
-    <input type="email" id="contactEmail" required>
-
-    <label for="contactMessage">Message</label>
-    <textarea id="contactMessage" rows="5" required></textarea>
-
-    <button type="submit">Send Message</button>
-</form>
-
-</section>
-
-</main>
-
-<script src="script.js"></script>
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
 
 </body>
 
